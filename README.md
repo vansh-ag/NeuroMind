@@ -637,6 +637,22 @@ Interactive Swagger documentation:
 http://127.0.0.1:8000/docs
 ```
 
+
+
+## Streamlit Frontend
+
+To provide an intuitive user experience, NeuroMind includes a lightweight Streamlit frontend that communicates with the FastAPI backend through REST APIs.
+
+The frontend allows users to generate personalized learning roadmaps, receive AI-powered project recommendations, and interact with the roadmap using a RAG-based AI tutor, all from a simple web interface. Streamlit serves purely as the presentation layer, while all business logic, AI generation, database operations, and Retrieval-Augmented Generation (RAG) processing are handled by the FastAPI backend.
+
+The frontend consists of three primary sections:
+
+* **Learning Roadmap** – Generate and visualize a personalized learning roadmap with recommended skills, learning tasks, estimated hours, and subtasks.
+* **Project Recommendation** – Generate a practical project tailored to the learner's roadmap and current skill set.
+* **AI Tutor** – Ask roadmap-specific questions and receive context-aware answers powered by the RAG pipeline, along with suggested follow-up questions.
+
+The frontend communicates with the backend using HTTP requests, ensuring a clear separation between the user interface and backend services while demonstrating the complete end-to-end workflow of the application.
+
 ---
 
 ## Prompt Design Decisions
